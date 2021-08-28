@@ -1,0 +1,23 @@
+[
+	{
+		"attendee_id" : 1,
+		"is_attending" : 1,
+		"attendee_name" : "MrWang",
+		"attendee_email" : "matwan@bergen.org",
+		"attendee_bio" : "I'm a teacher at BCA!"
+	},
+	{
+		"attendee_id" : 2,
+		"is_attending" : 0,
+		"attendee_name" : "mysteriousWang",
+		"attendee_email" : "mail4matthew@gmail.com",
+		"attendee_bio" : "I'm a coder!"
+	},
+	{
+		"attendee_id" : 3,
+		"is_attending" : 1,
+		"attendee_name" : "alter ego wang",
+		"attendee_email" : "wang.matthew.h@gmail.com",
+		"attendee_bio" : "I'm a web designer!"
+	}
+]

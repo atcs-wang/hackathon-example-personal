@@ -1,0 +1,52 @@
+[
+	{
+		"event_id" : 1,
+		"attendee_id" : 1,
+		"id" : 1
+	},
+	{
+		"event_id" : 1,
+		"attendee_id" : 2,
+		"id" : 2
+	},
+	{
+		"event_id" : 3,
+		"attendee_id" : 1,
+		"id" : 3
+	},
+	{
+		"event_id" : 5,
+		"attendee_id" : 2,
+		"id" : 4
+	},
+	{
+		"event_id" : 7,
+		"attendee_id" : 3,
+		"id" : 5
+	},
+	{
+		"event_id" : 10,
+		"attendee_id" : 2,
+		"id" : 6
+	},
+	{
+		"event_id" : 10,
+		"attendee_id" : 3,
+		"id" : 7
+	},
+	{
+		"event_id" : 10,
+		"attendee_id" : 1,
+		"id" : 8
+	},
+	{
+		"event_id" : 16,
+		"attendee_id" : 1,
+		"id" : 9
+	},
+	{
+		"event_id" : 16,
+		"attendee_id" : 3,
+		"id" : 11
+	}
+]

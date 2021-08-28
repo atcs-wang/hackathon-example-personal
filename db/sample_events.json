@@ -1,0 +1,182 @@
+[
+	{
+		"event_id" : 1,
+		"event_name" : "Opening Ceremony",
+		"event_location" : "Auditorium",
+		"event_type" : "Main",
+		"event_datetime" : "2021-05-02 10:30:00",
+		"event_duration" : 25,
+		"event_description" : "The opening ceremony will be rad! Don't miss it. Or you're technically late.",
+		"event_interest" : 2
+	},
+	{
+		"event_id" : 2,
+		"event_name" : "Hacktime",
+		"event_location" : "Gym",
+		"event_type" : "Main",
+		"event_datetime" : "2021-05-02 11:00:00",
+		"event_duration" : null,
+		"event_description" : "Hacking happens all day, all night. Consider the gym home base.",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 3,
+		"event_name" : "Presentations and Judging",
+		"event_location" : "Gym",
+		"event_type" : "Main",
+		"event_datetime" : "2021-05-03 09:00:00",
+		"event_duration" : 30,
+		"event_description" : "Time to show your project to the judges! Be at your table with your team - and some duct tape, just in case.",
+		"event_interest" : 1
+	},
+	{
+		"event_id" : 4,
+		"event_name" : "Closing Awards Ceremony",
+		"event_location" : "Auditorium",
+		"event_type" : "Main",
+		"event_datetime" : "2021-05-03 11:00:00",
+		"event_duration" : 30,
+		"event_description" : "We wrap it all up with some awards.",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 5,
+		"event_name" : "Beginner HTML/CSS/JS",
+		"event_location" : "Room 138A",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 12:30:00",
+		"event_duration" : 90,
+		"event_description" : "Never done web dev before? Jump start your first static web project with us.",
+		"event_interest" : 1
+	},
+	{
+		"event_id" : 6,
+		"event_name" : "Basic Hosting with Github Pages",
+		"event_location" : "Room 138A",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 17:30:00",
+		"event_duration" : 45,
+		"event_description" : "Use Github Pages to host a static web project. No prior experience with Git or Github necessary.",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 7,
+		"event_name" : "Introduction to Express for Web Dev",
+		"event_location" : "Room 138B",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 12:30:00",
+		"event_duration" : 75,
+		"event_description" : "Learn how to make basic web servers with NodeJS and Express",
+		"event_interest" : 1
+	},
+	{
+		"event_id" : 8,
+		"event_name" : "SQL Crash Course",
+		"event_location" : "Room 138B",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 14:30:00",
+		"event_duration" : 60,
+		"event_description" : "Learn justtt enough SQL to set up a database for your next project.",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 9,
+		"event_name" : "Handlebars for Templating (Express Pt 2A)",
+		"event_location" : "Room 138B",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 16:00:00",
+		"event_duration" : 45,
+		"event_description" : "Explore the power of server-side templating with Handlebars",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 10,
+		"event_name" : "Auth with Google Auth (Express Pt 2B)",
+		"event_location" : "Room 136",
+		"event_type" : "Workshop",
+		"event_datetime" : "2021-05-02 16:00:00",
+		"event_duration" : 45,
+		"event_description" : "Add user logins via Google to your Express web project!",
+		"event_interest" : 3
+	},
+	{
+		"event_id" : 11,
+		"event_name" : "White hat, black hat",
+		"event_location" : "Gym",
+		"event_type" : "Talk",
+		"event_datetime" : "2021-05-02 19:00:00",
+		"event_duration" : 45,
+		"event_description" : "Hear from a former NSA hacker about the good, the bad, and the sketchy in the world of hacking (and general development).",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 12,
+		"event_name" : "Planning the next HackBCA",
+		"event_location" : "Room 138A",
+		"event_type" : "Talk",
+		"event_datetime" : "2021-05-03 10:30:00",
+		"event_duration" : 30,
+		"event_description" : "Loved the event? Chat with the organizers to get involved with planning next year!",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 13,
+		"event_name" : "Lunch",
+		"event_location" : "Gym",
+		"event_type" : "Food",
+		"event_datetime" : "2021-05-02 10:55:00",
+		"event_duration" : null,
+		"event_description" : "Pick up a bagged lunch and start hacking!",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 14,
+		"event_name" : "Dinner",
+		"event_location" : "Lower Cafe",
+		"event_type" : "Food",
+		"event_datetime" : "2021-05-02 18:00:00",
+		"event_duration" : null,
+		"event_description" : "Catering from Chipotle! Fuel up before getting back to business",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 15,
+		"event_name" : "Breakfast",
+		"event_location" : "Lower Cafe",
+		"event_type" : "Food",
+		"event_datetime" : "2021-05-03 07:30:00",
+		"event_duration" : null,
+		"event_description" : "Grab a bagel and some very needed coffee.",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 16,
+		"event_name" : "Midnight Pizza",
+		"event_location" : "Gym",
+		"event_type" : "Food",
+		"event_datetime" : "2021-05-03 00:00:00",
+		"event_duration" : null,
+		"event_description" : "A timely and cheesy slice to keep you going. Served in the gym where everyone is crushing it.",
+		"event_interest" : 2
+	},
+	{
+		"event_id" : 17,
+		"event_name" : "Powerpoint Karaoke",
+		"event_location" : "Room 138A",
+		"event_type" : "Activity",
+		"event_datetime" : "2021-05-02 22:00:00",
+		"event_duration" : 45,
+		"event_description" : "How good are your pitch skills... when you don't even know what you're pitching?",
+		"event_interest" : 0
+	},
+	{
+		"event_id" : 18,
+		"event_name" : "Cup Stacking Competition",
+		"event_location" : "Lower Cafe",
+		"event_type" : "Activity",
+		"event_datetime" : "2021-05-03 01:00:00",
+		"event_duration" : 30,
+		"event_description" : "CUP STACKING CUP STACKING CUP STACKING",
+		"event_interest" : 0
+	}
+]
