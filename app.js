@@ -10,8 +10,20 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
+var hbs = require('hbs');
 app.set('views', path.join(__dirname, 'views'));
+//https://github.com/pillarjs/hbs#use
 app.set('view engine', 'hbs');
+// hbs engine is set to require('hbs')__express by default,line only necessary if using different engine than 'hbs', or different extension (i.e. html)
+//   app.engine('hbs', hbs.__express);
+//https://stackoverflow.com/questions/26871522/how-to-change-default-layout-in-express-using-handlebars
+
+//layout.hbs is the default layout, but you can change it globally with this here
+//   app.set('view options', { layout: 'layout' }); 
+//Register partials in particular directory
+hbs.registerPartials(__dirname + '/views/partials', function (err) {;});
+//TODO setup any additional helpers and partials
+
 
 app.use(logger('dev'));
 app.use(express.json());
