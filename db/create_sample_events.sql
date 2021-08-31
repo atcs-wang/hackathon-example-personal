@@ -14,7 +14,7 @@ VALUES
         ('Handlebars for Templating (Express Pt 2A)', 'Room 138B', 'Workshop', '2021-05-02 16:00:00', 45, 'Explore the power of server-side templating with Handlebars'),
         ('Auth with Google Auth (Express Pt 2B)', 'Room 136', 'Workshop', '2021-05-02 16:00:00', 45, 'Add user logins via Google to your Express web project!'),
 
-        ('White hat, black hat', 'Gym', 'Talk', '2021-05-02 19:00:00', 45, 'Hear from a former NSA hacker about the good, the bad, and the sketchy in the world of hacking (and general development).'),
+        ('White hat, black hat', 'Auditorium', 'Talk', '2021-05-02 19:00:00', 45, 'Hear from a former NSA hacker about the good, the bad, and the sketchy in the world of hacking (and general development).'),
         ('Planning the next HackBCA', 'Room 138A', 'Talk', '2021-05-03 10:30:00', 30, 'Loved the event? Chat with the organizers to get involved with planning next year!'),
 
         ('Lunch', 'Gym', 'Food', '2021-05-02 10:55:00', NULL, 'Pick up a bagged lunch and start hacking!'),
