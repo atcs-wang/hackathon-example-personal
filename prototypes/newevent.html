@@ -7,14 +7,12 @@
         <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
 
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="styles/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <link rel="stylesheet" href="styles/main.css">
 
-        <link rel="stylesheet" href="styles/index.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="styles/newevent.css">
     </head>
     <body>
 
@@ -92,12 +90,12 @@
                 
                             <div class="row">
                                 <div class = "input-field col s4">
-                                    <input type="text" id=event_date name="event_date" class="datepicker" required>
+                                    <input type="text" id=event_date name="event_date" class="datepicker no-autoinit" required>
                                     <label for="event_date">Date</label>
                                 </div>
                 
                                 <div class="input-field col s4">
-                                    <input type="text" id="event_time" name="event_time" class="timepicker" twelveHour=true required>
+                                    <input type="text" id="event_time" name="event_time" class="timepicker no-autoinit" twelveHour=true required>
                                     <label for="event_time">Time</label>
                                 </div>
 
@@ -123,8 +121,10 @@
 
                 </div>
             </form>
-        
-        <script>
+    </main>
+
+    <!-- Special script for initializing .datepicker and.timepicker with options -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.datepicker');
             var instances = M.Datepicker.init(elems, {
@@ -141,17 +141,10 @@
                 autoClose: false, // automatic close timepicker
             });
         });
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, {});
-        });
 
-        //TODO Form Validation
-        </script>
+    //TODO Form Validation
+    </script>
         
-        
-    </main>
 
     <!-- https://materializecss.com/footer.html -->
     <footer class="page-footer">
@@ -186,13 +179,12 @@
         </div>
       </footer>
 
-    <!-- initialize Materialize Sidenav elements -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll(".sidenav");
-            var instances = M.Sidenav.init(elems, {});
-        });
-    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+      
+    <!-- initialize Materialize elements -->
+    <script> M.AutoInit(); </script>
+
 
     </body>
 </html>
