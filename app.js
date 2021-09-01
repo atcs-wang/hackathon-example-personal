@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var eventsRouter = require('./routes/events');
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.set('view engine', 'hbs');
 
 //layout.hbs is the default layout, but you can change it globally with this here
 //   app.set('view options', { layout: 'layout' }); 
+
 //Register partials in particular directory
 hbs.registerPartials(__dirname + '/views/partials', function (err) {;});
 //TODO setup any additional helpers and partials
@@ -33,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/events', eventsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
