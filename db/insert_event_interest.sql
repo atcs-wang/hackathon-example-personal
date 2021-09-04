@@ -1,4 +1,4 @@
-INSERT INTO hackbca_example.event_interest
+INSERT INTO event_interest
 	(event_id,
     attendee_id)
 VALUES

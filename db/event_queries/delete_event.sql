@@ -1,5 +1,5 @@
 DELETE FROM 
-	hackbca_example.events
+	events
 	
 WHERE
 	event_id = ?

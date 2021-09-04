@@ -1,4 +1,4 @@
-INSERT INTO `hackbca_example`.`events` 
+INSERT INTO events 
         (`event_name`, `event_location`, `event_type`, `event_datetime`, `event_duration`, `event_description`) 
 VALUES 
         ('Opening Ceremony', 'Auditorium', 'Main', '2021-05-02 10:30:00', 25, 'The opening ceremony will be rad! Don\'t miss it. Or you\'re technically late.'),

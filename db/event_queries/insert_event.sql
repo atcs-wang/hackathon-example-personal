@@ -1,4 +1,4 @@
-INSERT INTO hackbca_example.events
+INSERT INTO events
 	(event_name, 
     event_location, 
     event_type, 

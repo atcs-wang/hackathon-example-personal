@@ -10,4 +10,4 @@ SELECT
     event_interest,
     event_description
 FROM 
-	hackbca_example.events
+	events

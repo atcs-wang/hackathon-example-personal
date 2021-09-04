@@ -1,4 +1,4 @@
-UPDATE hackbca_example.events
+UPDATE events
 SET
     event_name = ?,
     event_location = ?,  

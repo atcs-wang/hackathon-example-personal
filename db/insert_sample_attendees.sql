@@ -1,4 +1,4 @@
-INSERT INTO `hackbca_example`.`attendees` 
+INSERT INTO attendees 
 	( `is_attending`, `attendee_name`, `attendee_email`, `attendee_bio`) 
 VALUES 
 	(TRUE, 'MrWang', 'matwan@bergen.org', 'I\'m a teacher at BCA!'),

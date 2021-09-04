@@ -1,5 +1,5 @@
 DELETE 
-	FROM hackbca_example.event_interest
+	FROM event_interest
 	
 WHERE
 	event_id = ?event_id? AND

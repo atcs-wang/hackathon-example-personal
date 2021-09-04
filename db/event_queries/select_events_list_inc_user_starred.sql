@@ -9,10 +9,10 @@ SELECT
     event_duration, 
     event_interest,
     	EXISTS (SELECT * 
-			FROM hackbca_example.event_interest
+			FROM event_interest
             WHERE
-			attendee_id = ? AND hackbca_example.events.event_id = hackbca_example.event_interest.event_id
+			attendee_id = ? AND events.event_id = event_interest.event_id
             LIMIT 1
 			) as event_starred
 FROM 
-	hackbca_example.events
+	events

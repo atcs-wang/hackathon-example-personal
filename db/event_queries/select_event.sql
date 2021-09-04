@@ -10,7 +10,7 @@ SELECT
     event_interest,
     event_description
 FROM 
-	hackbca_example.events
+	events
 WHERE 
 	event_id = ?
 LIMIT 1
