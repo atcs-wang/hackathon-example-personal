@@ -3,15 +3,15 @@
     <h1>Event Schedule</h1>
     
     <blockquote>
-        Click on the event name for more details! 
-        Click on <i class="material-icons tiny">sort</i> to sort by that column, or items in <i class="material-icons tiny">filter_list</i> columns to filter by that item.    
+        Click on the Event name for more details! 
+        Click on a column to sort by it, or values in columns to filter by that value.    
     </blockquote>
     <div class="row">
-        <div class="col l3 s12 "> <i class="left material-icons">sort</i>Sorted by: Date / Time</div> 
+        <div class="col l3 s12 "> <i class="left material-icons">sort</i>Sorted by: XXX <a href='?{{queryParamsWithoutSort}}'>(clear)</a></div> 
         <div class="col l3 offset-l6 ">
             <!-- Position diffeently (left) for mobile -->
-            <div class="right hide-on-small-only"><i class="left material-icons">filter_list</i>Filter: None</div>
-            <div class="left hide-on-med-and-up"><i class="left material-icons">filter_list</i>Filter: None</div>
+            <div class="right hide-on-small-only"><i class="left material-icons">filter_list</i>Filter: None <a href='?{{queryParamsWithoutFilters}}'>(clear)</a></div>
+            <div class="left hide-on-med-and-up"><i class="left material-icons">filter_list</i>Filter: None <a href='?{{queryParamsWithoutFilters}}'>(clear)</a></div>
         </div>
 
     </div>
@@ -19,24 +19,28 @@
     <table class="highlight centered responsive-table">
     <thead>
         <tr>
-        <th><i class="material-icons">star</i>  
-            <a href="?sort=starred"><i class="material-icons">sort</i></a>
+        <th>
+            <a href='?{{queryParamsWithUpdate 'sort' 'starred'}}'><i class="material-icons">star</i></a>
         </th> <!-- USER ONLY-->
-        <th>Event</th>
-        <th>Location  <a href="?sort=location">
-                <i class="material-icons">sort</i></a> 
-                <i class="material-icons">filter_list</i>
+        <th>
+            <a href='?{{queryParamsWithUpdate 'sort' 'event'}}'>Event</a>
         </th>
-        <th>Date / Time 
-            <a href="?sort=datetime"><i class="material-icons">sort</i></a>
+        <th>
+            <a href='?{{queryParamsWithUpdate 'sort' 'location'}}'>Location</a> 
         </th>
-        <th>Duration</th>
-        <th>Type  
-            <a href="?sort=type"><i class="material-icons">sort</i></a>
-            <i class="material-icons">filter_list</i>
+        <th> 
+            <a href='?{{queryParamsWithUpdate 'sort' 'datetime'}}'>Date / Time</a> 
         </th>
-        <th>Interest<i class="material-icons">sort</i></th>
-        </tr>
+        <th> 
+            <a href='?{{queryParamsWithUpdate 'sort' 'duration'}}'>Duration</a> 
+        </th>
+        <th> 
+            <a href='?{{queryParamsWithUpdate 'sort' 'type'}}'>Type</a> 
+        </th>
+        <th> 
+            <a href='?{{queryParamsWithUpdate 'sort' 'interest'}}'>Interest</a> 
+        </th>
+        
         <!-- ADMIN ONLY BUTTONS -->
         <th>Admin Op</th>
     </thead>
@@ -53,10 +57,10 @@
                 <!-- <a onclick='toggleInterest(this, "{{ event_id }}"))'class="btn-floating btn-small waves-effect waves-light scale-transition scale-in yellow"><iclass="material-icons">star</i></a> -->
             </td> 
             <td class="blue-text clickable" onclick="location.href='/events/{{ event_id }}'">{{event_name}}</td> <!-- General: './{{ event_id }}/' -->
-            <td> <a href='?filter=location:{{event_location}}'>{{event_location}} </a></td>
-            <td><a href='?filter=date_ymd:{{event_date_ymd}}'>{{event_date}}</a> {{event_time}}</td>
+            <td> <a href='?{{queryParamsWithUpdate 'location' event_location}}'>{{event_location}} </a></td>
+            <td><a href='?{{queryParamsWithUpdate 'date' event_date}}'>{{event_date_pretty}}</a> {{event_time}}</td>
             <td>{{event_duration}}</td>
-            <td> <a href='?filter=type:{{event_type}}'>{{event_type}}</a></td>
+            <td> <a href='?{{queryParamsWithUpdate 'type' event_type}}'>{{event_type}}</a></td>
             <td>{{event_interest}}<i class=material-icons>people</i></td>
             <!-- ADMIN ONLY BUTTONS -->
             <td nowrap>
