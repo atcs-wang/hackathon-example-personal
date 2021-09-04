@@ -37,14 +37,22 @@ let connectionPool = mysql.createPool(dbConfig);
 
 // When we want to make a query, the pool.query() method can be used.
 // This is a shortcut for the pool.getConnection() -> connection.query() -> connection.release() 
-//Super efficient use of db connections might do multiple queries on one connection before closing, 
-// but this is not super important for us.
+//More efficient use of db connections might do multiple queries on one connection before closing, 
+// but this is not super important for small applications.
 
 
 //Add two custom query functions:
 
-//Wrapper of the query function with logging
-connectionPool.queryCallback = (sql, args, callback) => {
+//Wrapper of the query function with logging.
+//Levels of logging will be enabled/disabled based on the .env variables
+//ARGS: 
+//  sql is a query string, possibly with '?' for value args and 
+//  args is an array of arguments to be escaped and inserted at each '?' or '??' in sql. If none, must be an empty [].
+//  callback is a function that takes two params:
+//      err: if an error occurs, this will describe the error. Otherwise, is falsy.
+//      results: Array of record objects, where each property matches a column 
+//  If no callback provided, the query is still made and logging occurs.
+connectionPool.queryCallback = function (sql, args, callback = (()=>{})) {
     //Log query before sending
     if(LOG_QUERIES) 
         console.log(`QUERY @${dbConfig.database}: '${sql}', ${args}`);
@@ -70,15 +78,19 @@ connectionPool.queryCallback = (sql, args, callback) => {
     });
 }
 
-//Wrapper of the query function with logging; returns only the first result
-//If no results found, result will be undefined
-connectionPool.querySingleCallback = (sql, args, callback) => {
+//See above queryCallback, except for the callback function: 
+//      results: Single record object (not an array), where each property matches a column 
+connectionPool.querySingleCallback = function (sql, args, callback) {
     //Use array destructuring to fetch first result only (will be undefined if no results found)
     connectionPool.queryCallback(sql, args, (err, [singleResult]) => callback(err,singleResult))
 }
 
-//Promise wrapper for query function
-connectionPool.queryPromise = (sql, args) =>  {
+//Promise wrapper for query function. 
+//Use instead of queryCallback. 
+//  connectionPool.queryPromise(sql, args)
+//  .then(results => {/* handle results*/}
+//  .catch(err => {/* handle err */})
+connectionPool.queryPromise = function  (sql, args)  {
     return new Promise ((resolve, reject) => {
         connectionPool.queryCallback(sql, args, (err, results) => {
             if (err)
@@ -88,8 +100,8 @@ connectionPool.queryPromise = (sql, args) =>  {
     });
 }
 
-//Promise wrapper for querySingle function
-connectionPool.querySinglePromise = (sql, args) =>  {
+//Promise wrapper for querySingle function; result is a single object, not an array
+connectionPool.querySinglePromise = function (sql, args) {
     return new Promise ((resolve, reject) => {
         connectionPool.querySingleCallback(sql, args, (err, results) => {
             if (err)
