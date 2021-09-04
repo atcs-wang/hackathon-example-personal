@@ -12,6 +12,8 @@ var app = express();
 
 // view engine setup
 var hbs = require('hbs');
+require('./hbs_helpers');
+
 app.set('views', path.join(__dirname, 'views'));
 //https://github.com/pillarjs/hbs#use
 app.set('view engine', 'hbs');
