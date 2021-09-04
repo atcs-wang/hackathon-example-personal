@@ -44,8 +44,8 @@
     
                 <div class="row">
                     <div class = "input-field col s4">
-                        <input type="text" id=event_date_ymd name="event_date_ymd" class="datepicker no-autoinit" required>
-                        <label for="event_date_ymd">Date</label>
+                        <input type="text" id=event_date name="event_date" class="datepicker no-autoinit" required>
+                        <label for="event_date">Date</label>
                     </div>
     
                     <div class="input-field col s4">
@@ -81,7 +81,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.datepicker');
         var instances = M.Datepicker.init(elems, {
-            format: 'yyyy-mm-dd',
+            format: 'mm-dd-yyyy',
             autoClose: true
         });
     });
@@ -105,7 +105,7 @@
         document.getElementById("event_name").value = "{{{event_name}}}";
         document.getElementById("event_type").value = "{{{event_type}}}";
         document.getElementById("event_location").value = "{{{event_location}}}";
-        document.getElementById("event_date_ymd").value = "{{{event_date_ymd}}}";
+        document.getElementById("event_date").value = "{{{event_date}}}";
         document.getElementById("event_time").value = "{{{event_time}}}";
         document.getElementById("event_duration").value = "{{{event_duration}}}";
         document.getElementById("event_description").value = "{{{event_description}}}";
