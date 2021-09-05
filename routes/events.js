@@ -38,9 +38,9 @@ router.post('/', async function(req, res, next) {
   try {
     //form data to be inserted into database  
     let event_id = await db.insert_event(req.body);  
-    //Response code of 201 Created
-    //Redirect to the new event page for the created event.
-    res.redirect(201, `/events/${event_id}`);
+    //Ideal RESTful Response code of 201 Created, include url of new response and front-end will go to url
+    //Common "hack":  Redirect with status code 307 to the updated event page for the created event.
+    res.redirect(`/events/${event_id}`);
   } catch(err){
     res.sendStatus(400);
   }
@@ -90,9 +90,9 @@ router.post('/:event_id', async function(req, res, next) {
   try {
     //form data to be inserted into database  
     await db.update_event(req.body, event_id);  
-    //Response code of 201 OK
-    //Redirect to the new event page for the created event.
-    res.redirect(200, `/events/${event_id}`);
+        //Ideal RESTful Response code of 200 OK, include url of new response and front-end will go to url
+        //COmmon "Redirect to the new event page for the created event.
+    res.redirect(`/events/${event_id}`);
   } catch(err){
     res.sendStatus(400);
   }
@@ -105,8 +105,10 @@ router.delete('/:event_id', async function(req, res, next) {
   try {
     //form data to be inserted into database  
     await db.delete_event(event_id);  
-    //Response code of 204 No Content
+    //Ideal RESTful approach: Response code of 204 No Content
     res.sendStatus(204);
+    //Front end will handle redirecting/refreshing events page
+    //The "common hack" of redirecting via 307 doesn't work, since delete is an AJAX call
   } catch(err){
     res.sendStatus(400);
   }
