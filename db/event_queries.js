@@ -82,7 +82,7 @@ module.exports.insert_event = function(event_data){
                                             event_data.event_location, 
                                             event_data.event_type, 
                                             `${event_data.event_date} ${event_data.event_time}`,
-                                            event_data.event_duration, 
+                                            event_data.event_duration || null, 
                                             event_data.event_description])
             .then(results => results.insertId) //take result and get insertId, which has newly inserted row
             ); 
@@ -95,7 +95,7 @@ module.exports.update_event = function(event_data, event_id){
                                             event_data.event_location, 
                                             event_data.event_type, 
                                             `${event_data.event_date} ${event_data.event_time}`,
-                                            event_data.event_duration, 
+                                            event_data.event_duration || null, 
                                             event_data.event_description,
                                             event_id]);
 }
