@@ -1,3 +1,6 @@
+//This JS provides functions for pseudo-functionality for certain kinds of buttons.
+
+
 function confirmDelete(event_name, event_id, redirect_to){
     if(confirm(`Are you sure you want to delete the event ${event_name} (id ${event_id})? This is PERMANENT and cannot be undone.`)) {
         //TODO: make delete request

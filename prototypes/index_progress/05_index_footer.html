@@ -1,7 +1,13 @@
-<!--   
-   Largely based on a simple starter template.
-   https://materializecss.com/templates/starter-template/preview.html
- -->
+<!--
+   Step 5 of prototyped homepage (index) creation: 
+   Add a footer. 
+   The content of the footer also uses the Grid system  to lay out its elements. 
+   Note that the layout actually differs for a large screen  vs a small (mobile) screen.
+
+   Additional references: 
+   https://materializecss.com/footer.html
+   https://materializecss.com/grid.html
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,14 +19,30 @@
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="/styles/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!-- Shared site-wide CSS  -->
-        <link rel="stylesheet" href="/styles/main.css">
-        <!-- Page specific CSS -->
-        <link rel="stylesheet" href="/styles/index.css">
+
+        <style>
+            html {
+                background-color: #90caf9 ; /*blue lighten-3*/
+            }
+
+            main h1 {
+                font-weight: bolder;
+                color: lightcyan;
+                text-align: center;
+            }
+
+            nav img {
+                height: 3em;
+                vertical-align: middle;
+                margin: 0 .5em;
+            }
+        </style>
+        
     </head>
     <body>
 
     <!-- https://materializecss.com/navbar.html -->
+    <!-- https://materializecss.com/navbar.html#mobile-collapse -->
     <header>
         <nav>
             <div class="nav-wrapper">
@@ -44,6 +66,7 @@
     </header>
 
     <main>
+        <!-- https://materializecss.com/grid.html -->
         <!-- https://materializecss.com/cards.html -->
         <div class="container">
             <h1>Get ready for HackBCA!</h1>
@@ -78,7 +101,8 @@
     </main>
 
     <!-- https://materializecss.com/footer.html -->
-    <footer class="page-footer">
+        <!-- https://materializecss.com/grid.html -->
+        <footer class="page-footer">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
@@ -108,7 +132,7 @@
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
           </div>
         </div>
-      </footer>
+    </footer>
 
     <!-- Compiled and minified Materialize JavaScript -->
     <script src="/js/materialize.min.js"></script>

@@ -1,3 +1,24 @@
+<!-- 
+    STOP! You should understand how index.html is built first. (check out versions in index_progress)
+    
+    This page is a prototype of the page that lists all the events of the hackathon.
+    An unregistered user will not see any buttons.
+    A registered user (attendee) will see the "star" buttons
+    An admin user will see the edit, delete, and create buttons
+
+    This page has the same nav header and footer as index; the main section is what contains different things.
+
+    Of Note: 
+        Tables, which materialize has nice options for: https://materializecss.com/table.html
+        Icons, which are : https://materializecss.com/icons.html
+        Materialize "buttons": https://materializecss.com/buttons.html
+        Some relative links that add URL query params, for filtering/searching 
+        Some custom CSS for formatting tables:         <link rel="stylesheet" href="/styles/tables.css">
+        Some custom JS for interactive buttons:     <script src="/js/event_utils.js"></script>
+
+    After this page, check out events/1.html (a sample event page) and eventform.html (a sample add/modify event page)
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,8 +31,9 @@
         <link rel="stylesheet" href="/styles/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+        <!-- Shared site-wide CSS  -->
         <link rel="stylesheet" href="/styles/main.css">
-
+        <!-- Page specific CSS -->
         <link rel="stylesheet" href="/styles/tables.css">
     </head>
     <body>
@@ -37,6 +59,8 @@
         </ul>
     </header>
     <main>
+        <!-- https://materializecss.com/grid.html -->
+
         <div class="container">
             
             <h1>Event Schedule</h1>
@@ -92,16 +116,15 @@
                     </td> 
                     <td class="blue-text clickable" onclick="location.href='/events/1.html'">Opening Ceremony</td> <!-- General: './{{ event_id }}/' -->
                     <td> <a href='?filter=location:Auditorium'>Auditorium </a></td>
-                    <td>May 2 (Sat) 08:30 AM</td>
-                    <td>45m</td>
+                    <td><a href='?filter=date:05-01-2022'>May 1 (Sat)</a> 10:30 AM</td>
+                    <td>30m</td>
                     <td> <a href='?filter=type:Main'>Main</a></td>
-                    <td>10<i class=material-icons>people</i></td>
+                    <td>100<i class=material-icons>people</i></td>
                     <!-- ADMIN ONLY BUTTONS -->
                     <td nowrap>
                                     
                         <!-- Alternatively to going to a new page, trigger a modal ??-->
                         <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="/eventform.html"><i class="material-icons">edit</i></a>
-                        <!-- Alternatively to a redirect/refresh, use a fetch(... {method: 'DELETE'} request??-->
                         <a class="btn-floating waves-effect waves-light red" onclick='confirmDelete("Opening Ceremony","{{ event_id}}", ".")'><i class="material-icons">delete</i></a>
 
                     </td>
@@ -115,18 +138,17 @@
                             <a onclick='toggleInterest(this, "{{ event_id }}")' class="btn-floating btn-small waves-effect waves-light scale-transition scale-in blue"><i class="material-icons">star_border</i></a>
                             <!-- <a onclick='toggleInterest(this, "{{ event_id }}"))'class="btn-floating btn-small waves-effect waves-light scale-transition scale-in yellow"><iclass="material-icons">star</i></a> -->
                         </td> 
-                        <td class="blue-text clickable" onclick="location.href='/events/1.html'">Opening Ceremony</td> <!-- General: './{{ event_id }}/' -->
+                        <td class="blue-text clickable" onclick="location.href='/events/2.html'">Closing Awards Ceremony</td> <!-- General: './{{ event_id }}/' -->
                         <td> <a href='?filter=location:Auditorium'>Auditorium </a></td>
-                        <td><a href='?filter=date:05-22-2021'>May 2 (Sat)</a> 08:30 AM</td>
-                        <td>45m</td>
+                        <td><a href='?filter=date:05-02-2021'>May 2 (Sun)</a> 11:00 AM</td>
+                        <td>30m</td>
                         <td> <a href='?filter=type:Main'>Main</a></td>
-                        <td>10<i class=material-icons>people</i></td>
+                        <td>99<i class=material-icons>people</i></td>
                         <!-- ADMIN ONLY BUTTONS -->
                         <td nowrap>
                                         
                             <!-- Alternatively to going to a new page, trigger a modal ??-->
                             <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="./eventform.html"><i class="material-icons">edit</i></a>
-                            <!-- Alternatively to a redirect/refresh, use a fetch(... {method: 'DELETE'} request??-->
                             <a class="btn-floating waves-effect waves-light red" onclick='confirmDelete("Opening Ceremony","{{ event_id}}")'><i class="material-icons">delete</i></a>
     
                         </td>
