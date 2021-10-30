@@ -1,29 +1,3 @@
-<!-- 
-    STOP! You should understand how index.html AND events.html are built first. 
-
-    This page is a prototype of an event page, showing details about a specific event.
-
-    An unregistered user will not see any buttons.
-    A registered user (attendee) will see the "star" buttons
-    An admin user will see the edit, delete, and create buttons
-
-    This page has the same nav header and footer as index; the main section is what contains different things.
-
-    Many things of note are shared with events.html: 
-        Tables, which materialize has nice options for: https://materializecss.com/table.html
-        Icons, which are : https://materializecss.com/icons.html
-        Materialize "buttons": https://materializecss.com/buttons.html
-        Some custom CSS for formatting tables:         <link rel="stylesheet" href="/styles/tables.css">
-        Some custom JS for interactive buttons:     <script src="/js/event_utils.js"></script>
-
-    Some things of note SPECIFIC TO THIS PAGE:
-        Most of the page is a Materialize Card:    https://materializecss.com/cards.html 
-        Some custom CSS:         <link rel="stylesheet" href="/styles/event.css">
-
-
-    After this page, check out eventform.html (a sample add/modify event page)
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +52,7 @@
             <img src="/images/assembly.jpg">
           </div>
           <span class="card-title">
-            <h1>Closing Awards Ceremony</h1>
+            <h1>Opening Ceremony</h1>
           </span>
           <!-- USER ONLY - Initialize page with appropriate state of button -->
           <a onclick='toggleInterest(this, "{{ event_id }}")'
@@ -106,10 +80,10 @@
               <tr>
 
                 <td>Auditorium</td>
-                <td>May 2 (Sun) 11:00 AM</td>
+                <td>May 1 (Sat) 10:30 AM</td>
                 <td>30m</td>
                 <td>Main</td>
-                <td>99<i class=material-icons>people</i></td>
+                <td>100<i class=material-icons>people</i></td>
                 <!-- ADMIN ONLY BUTTONS -->
 
                 <td nowrap>
@@ -125,7 +99,8 @@
 
             </tbody>
           </table>
-          <div class="container event-description">We wrap it all up with some awards.</div>
+          <div class="container event-description">The opening ceremony will be rad! Don't miss it. Or you're
+            technically late.</div>
 
 
           <!-- TODO: Add a scrollable table (or series of cards??) listing the attendees who are interested -->

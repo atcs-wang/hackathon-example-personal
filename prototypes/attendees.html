@@ -1,24 +1,3 @@
-<!-- 
-    STOP! You should understand how index.html is built first. (check out versions in index_progress)
-    
-    This page is a prototype of the page that lists all the events of the hackathon.
-    An unregistered user will not see any buttons.
-    A registered user (attendee) will see the "star" buttons
-    An admin user will see the edit, delete, and create buttons
-
-    This page has the same nav header and footer as index; the main section is what contains different things.
-
-    Of Note: 
-        Tables, which materialize has nice options for: https://materializecss.com/table.html
-        Icons, which are : https://materializecss.com/icons.html
-        Materialize "buttons": https://materializecss.com/buttons.html
-        Some relative links that add URL query params, for filtering/searching 
-        Some custom CSS for formatting tables:         <link rel="stylesheet" href="/styles/tables.css">
-        Some custom JS for interactive buttons:     <script src="/js/event_utils.js"></script>
-
-    After this page, check out events/1.html (a sample event page) and eventform.html (a sample add/modify event page)
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,15 +44,15 @@
 
     <div class="container">
 
-      <h1>Event Schedule</h1>
+      <h1>Attendees</h1>
 
       <blockquote>
-        Click on the event name for more details!
+        Click on the attendee's name for more details!
         Click on <i class="material-icons tiny">sort</i> to sort by that column, or items in <i
           class="material-icons tiny">filter_list</i> columns to filter by that item.
       </blockquote>
       <div class="row">
-        <div class="col l3 s12 "> <i class="left material-icons">sort</i>Sorted by: Date / Time</div>
+        <div class="col l3 s12 "> <i class="left material-icons">sort</i>Sorted by: Name</div>
         <div class="col l3 offset-l6 ">
           <!-- Position diffeently (left) for mobile -->
           <div class="right hide-on-small-only"><i class="left material-icons">filter_list</i>Filter: None</div>
