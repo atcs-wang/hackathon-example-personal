@@ -1,0 +1,53 @@
+<form id="login_register_user" method="POST" action="#">
+    <div class="container">
+        <div class="card grey lighten-4">
+            <div class="card-content">
+
+                <span class="card-title"><h1>{{#if register}}Register{{else}}Login{{/if}}</h1></span>
+    
+                <div class="row">
+                    <div class = "input-field col s12">
+                        <input type="email" id=attendee_email name="attendee_email" class="validate" required>
+                        <label for="attendee_email">Email</label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="input-field col s12">
+                        <input type="password" id="user_password" name="user_password" class="validate" required>
+                        <label for="user_password">Password</label>
+                    </div>
+
+                </div>
+    
+
+
+                {{#if register}}
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="attendee_name" name="attendee_name" class="validate" data-length="32" required>
+                        <label for="attendee_name">Username</label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12">
+                    <textarea id="attendee_description" class="materialize-textarea" data-length="500"></textarea>
+                    <label for="attendee_description">Description</label>
+                    </div>
+                </div>
+
+                {{/if}}
+
+                <div class="button_wrapper">
+                    <button class="submit waves-effect waves-light btn" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
